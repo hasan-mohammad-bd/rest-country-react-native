@@ -1,20 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Countries from './components/Countries';
-import React, {useState, useEffect} from 'react';
+
 
 
 export default function App() {
-  const [countries, setCountries] = useState([]);
-  useEffect(()=> {
-    fetch('')
-    .then(res => res.json())
-    .then(data => setCountries(data));
-  },[])
+
   return (
     <View style={styles.container}>
-      <Text>Visiting countries</Text>
       <StatusBar style="auto" />
+      <Text>What the hell is going on</Text> 
       <Countries></Countries>
     </View>
   );
